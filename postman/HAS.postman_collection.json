@@ -1,0 +1,2373 @@
+{
+	"info": {
+		"_postman_id": "ccdccde0-3c7b-4ec8-a442-c63e90acb88f",
+		"name": "HAS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12133333"
+	},
+	"item": [
+		{
+			"name": "Master",
+			"item": [
+				{
+					"name": "GetMarkets",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check for status code\", function() {",
+									"    pm.response.to.have.status(200)",
+									"})",
+									"",
+									"pm.test(\"Check response is an array\", function() {",
+									"    pm.expect(pm.response.json()).to.be.an('array');",
+									"    pm.expect(5).to.equal(pm.response.json().length, \"Count of markets do not match with expected.\");",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hasBaseServiceUrl}}/api/master/markets",
+							"host": [
+								"{{hasBaseServiceUrl}}"
+							],
+							"path": [
+								"api",
+								"master",
+								"markets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPhoneTypes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check for status code\", function(){\r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Check response is an array\", function() {\r",
+									"    pm.expect(pm.response.json()).to.be.an('array');\r",
+									"    pm.expect(3).to.equal(pm.response.json().length, \"Count of phone types do not match with expected.\");\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hasBaseServiceUrl}}/api/master/phonetypes",
+							"host": [
+								"{{hasBaseServiceUrl}}"
+							],
+							"path": [
+								"api",
+								"master",
+								"phonetypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAddressTypes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check for status code\", function(){pm.response.to.have.status(200)})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hasBaseServiceUrl}}/api/master/addresstypes",
+							"host": [
+								"{{hasBaseServiceUrl}}"
+							],
+							"path": [
+								"api",
+								"master",
+								"addresstypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetGenders",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check for status code\", function(){pm.response.to.have.status(200)})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hasBaseServiceUrl}}/api/master/genders",
+							"host": [
+								"{{hasBaseServiceUrl}}"
+							],
+							"path": [
+								"api",
+								"master",
+								"genders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetIdentityTypes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check for status code\", function(){pm.response.to.have.status(200)})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hasBaseServiceUrl}}/api/master/identitytypes",
+							"host": [
+								"{{hasBaseServiceUrl}}"
+							],
+							"path": [
+								"api",
+								"master",
+								"identitytypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStates",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check for status code\", function(){pm.response.to.have.status(200)})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hasBaseServiceUrl}}/api/master/states",
+							"host": [
+								"{{hasBaseServiceUrl}}"
+							],
+							"path": [
+								"api",
+								"master",
+								"states"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLanguages",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check for status code\", function(){\r",
+									"    pm.response.to.have.status(200)\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Check response is an array\", function() {\r",
+									"    pm.expect(pm.response.json()).to.be.an('array');\r",
+									"    pm.expect(2).to.equal(pm.response.json().length, \"Count of languages do not match with expected.\");\r",
+									"})\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hasBaseServiceUrl}}/api/master/languages",
+							"host": [
+								"{{hasBaseServiceUrl}}"
+							],
+							"path": [
+								"api",
+								"master",
+								"languages"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "UserService",
+					"item": [
+						{
+							"name": "ChangePassword",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for status code\", function() {\r",
+											"    pm.response.to.have.status(200)\r",
+											"})\r",
+											"\r",
+											"pm.test(\"Check response object properties\", function () {\r",
+											"    pm.expect(pm.response.json().result).to.be.eql(null, \"result should be null\");\r",
+											"    pm.expect(true).to.be.eql(pm.response.json().isSuccess, \"isSuccess was expected to be true.\");\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"customerCode\": \"{{customerCode}}\",\r\n  \"username\": \"{{username}}\",\r\n  \"oldPassword\": \"yogesh\",\r\n  \"newPassword\": \"{{password}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/changepassword",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"changepassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for status code\", function() {\r",
+											"    pm.response.to.have.status(200)\r",
+											"})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"customerCode\": \"202301131\",\r\n  \"username\": \"admin@example.com\",\r\n  \"password\": \"admin\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/login",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Users",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for status code\", function(){pm.response.to.have.status(200)})\r",
+											"\r",
+											"if(pm.response.code === 200 ){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstname\": \"{{$randomFirstName}}\",\r\n    \"middlename\": \"{{$randomFirstName}}\",\r\n    \"lastname\": \"{{$randomLastName}}\",\r\n    \"dateOfBirth\": \"2023-02-22\",\r\n    \"genderCode\": \"MALE\",\r\n    \"phoneNumber\": \"{{$randomPhoneNumber}}\",\r\n    \"emailAddress\": \"{{$randomEmail}}\",\r\n    \"forceCreate\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ChangeLanguage",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for status code\", function(){\r",
+											"    pm.response.to.have.status(200)\r",
+											"    })\r",
+											"\r",
+											"\r",
+											"if(pm.response.code===200){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\"string\"",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/changelanguage",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"changelanguage"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RefreshToken",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})\r",
+											"if(pm.response.code===200){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\"string\"",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/refreshtoken",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"refreshtoken"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})\r",
+											"\r",
+											"if(pm.response.code === 200 ){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/logout",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateCustomerAppUserLogin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"customerId\": 1,\r\n  \"appUserId\": 1,\r\n  \"emailAddress\": \"admin@example.com\",\r\n  \"password\": \"admin\",\r\n  \"languageCode\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/logic/create",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"logic",
+										"create"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "AddressService",
+					"item": [
+						{
+							"name": "Addresses",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/addresses/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"addresses",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Addresses",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status Code\", function(){pm.response.to.have.status(200)})\r",
+											"if(pm.response.code === 200){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/addresses/{id}",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"addresses",
+										"{id}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AppuserId",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status Code\", function(){pm.response.to.have.status(200)})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/addresses/appuser/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"addresses",
+										"appuser",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Addresses",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status Code\", function(){pm.response.to.have.status(200)})\r",
+											"if(pm.response.code === 200){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"appUserId\": 1,\r\n  \"addressTypeCode\": \"string\",\r\n  \"addressLine1\": \"{{$randomStreetAddress}}\",\r\n  \"addressLine2\": \"{{$randomStreetAddress}}\",\r\n  \"addressLine3\": \"{{$randomStreetAddress}}\",\r\n  \"city\": \"{{$randomCity}}\",\r\n  \"pincode\": \"string\",\r\n  \"stateCode\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/addresses",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"addresses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Addresses",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status Code\", function(){pm.response.to.have.status(200)})\r",
+											"if(pm.response.code === 200){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"appUserAddressId\": 0,\r\n  \"addressTypeCode\": \"string\",\r\n  \"addressLine1\": \"{{$randomStreetName}}\",\r\n  \"addressLine2\": \"{{$randomStreetAddress}}\",\r\n  \"addressLine3\": \"{{$randomStreetAddress}}\",\r\n  \"city\": \"{{$randomCity}}\",\r\n  \"pincode\": \"string\",\r\n  \"stateCode\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/addresses",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"addresses"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PhoneServices",
+					"item": [
+						{
+							"name": "Phones",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status Code\", function(){pm.response.to.have.status(200)})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/phones/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"phones",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Phone",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check Status Code\",function(){\r",
+											"    pm.response.to.have.status(200)})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/phones/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"phones",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PhoneUsers",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status Code\", function(){pm.response.to.have.status(200)})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/phones/users/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"phones",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Phones",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status Code\", function(){pm.response.to.have.status(200)})\r",
+											"if(pm.response.code === 200){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"appUserId\": 1,\r\n  \"phoneTypeCode\": \"string\",\r\n  \"phoneNumber\": \"{{$randomPhoneNumber}}\",\r\n  \"listedAs\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/phones",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"phones"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Phones",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status Code\", function(){pm.response.to.have.status(200)})\r",
+											"if(pm.response.code === 200){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"appUserPhoneId\": 0,\r\n  \"phoneTypeCode\": \"string\",\r\n  \"phoneNumber\": \"{{$randomPhoneNumber}}\",\r\n  \"listedAs\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/phones",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"phones"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{hasAccessToken}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "PatientService",
+					"item": [
+						{
+							"name": "Patients",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(201)})\r",
+											"if(pm.response.code===201){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstname\": \"{{$randomFirstName}}\",\r\n  \"middlename\": \"{{$randomFirstName}}\",\r\n  \"lastname\": \"{{$randomLastName}}\",\r\n  \"genderCode\": \"MALE\",\r\n  \"dateOfBirth\": \"2023-02-21T11:51:12.704Z\",\r\n  \"forceCreate\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Patients",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})\r",
+											"\r",
+											"if(pm.response.code === 200 ){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"patientId\": 1,\r\n  \"firstname\": \"{{$randomFirstName}}\",\r\n  \"middlename\": \"{{$randomFirstName}}\",\r\n  \"lastname\": \"{{$randomLastName}}\",\r\n  \"genderCode\": \"MALE\",\r\n  \"dateOfBirth\": \"2023-02-21\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PatientId",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check Status Code\",function(){\r",
+											"    pm.response.to.have.status(200)\r",
+											"})\r",
+											"\r",
+											"if(pm.response.code === 200 ){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PatientCode",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check Status Code\",function(){\r",
+											"    pm.response.to.have.status(200)})\r",
+											"if(pm.response.code === 200 ){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/code/{code}",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"code",
+										"{code}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Search",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})\r",
+											"\r",
+											"if(pm.response.code === 200 ){\r",
+											"    pm.collectionVariables.set(\"hasAccessToken\",pm.response.json())\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"firstname\": \"{{$randomFirstName}}\",\r\n  \"lastname\": \"{{$randomLastName}}\",\r\n  \"phoneNumber\": \"{{$randomPhoneNumber}}\",\r\n  \"identityNumber\": \"string\",\r\n  \"email\": \"{{$randomEmail}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/search",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"search"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "EmailService",
+					"item": [
+						{
+							"name": "Emails",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check Status Code\",function(){\r",
+											"    pm.response.to.have.status(200)})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/emails/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"emails",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Emails",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check Status Code\",function(){\r",
+											"    pm.response.to.have.status(200)})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/emails/{id}",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"emails",
+										"{id}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Emails",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"patientId\": 0,\r\n  \"emailAddress\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/emails",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"emails"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Emails",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status Code\", function(){pm.response.to.have.status(200)})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"patientEmailId\": 0,\r\n  \"emailAddress\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/emails",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"emails"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PatientEmailsId",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check Status Code\",function(){\r",
+											"    pm.response.to.have.status(200)})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/emails/patient/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"emails",
+										"patient",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "AddressService",
+					"item": [
+						{
+							"name": "Addresses",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/addresses/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"addresses",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PatientAddresses",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check Status Code\",function(){\r",
+											"    pm.response.to.have.status(200)})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/users/addresses/{id}",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"addresses",
+										"{id}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PatientAddressId",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check Status Code\",function(){\r",
+											"    pm.response.to.have.status(200)})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/addresses/patient/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"addresses",
+										"patient",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Address",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"patientId\": 0,\r\n  \"addressTypeCode\": \"string\",\r\n  \"addressLine1\": \"{{$randomStreetName}}\",\r\n  \"addressLine2\": \"{{$randomStreetAddress}}\",\r\n  \"addressLine3\": \"{{$randomStreetAddress}}\",\r\n  \"city\": \"{{$randomCity}}\",\r\n  \"pincode\": \"string\",\r\n  \"stateCode\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/addresses",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"addresses"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Address",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"patientAddressId\": 0,\r\n  \"addressTypeCode\": \"string\",\r\n  \"addressLine1\": \"string\",\r\n  \"addressLine2\": \"string\",\r\n  \"addressLine3\": \"string\",\r\n  \"city\": \"string\",\r\n  \"pincode\": \"string\",\r\n  \"stateCode\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/addresses",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"addresses"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "IdentityService",
+					"item": [
+						{
+							"name": "Identities",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status Code\", function(){pm.response.to.have.status(200)})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"patientId\": 0,\r\n  \"identityTypeCode\": \"string\",\r\n  \"identityNumber\": \"string\",\r\n  \"issuedBy\": \"string\",\r\n  \"placeIssued\": \"string\",\r\n  \"expiry\": \"2023-02-21T13:16:59.968Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/identities",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"identities"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Identities",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"patientIdentityId\": 0,\r\n  \"identityTypeCode\": \"string\",\r\n  \"identityNumber\": \"string\",\r\n  \"issuedBy\": \"string\",\r\n  \"placeIssued\": \"string\",\r\n  \"expiry\": \"2023-02-21T13:21:34.020Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/identities",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"identities"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PatientsIdentities",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check Status Code\",function(){\r",
+											"    pm.response.to.have.status(200)\r",
+											"})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/identities/{id}",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"identities",
+										"{id}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PatientsIdentities",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check Status Code\",function(){\r",
+											"    pm.response.to.have.status(200)})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/identities/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"identities",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PatientsIdentitesId",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check Status Code\",function(){\r",
+											"    pm.response.to.have.status(200)\r",
+											"})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/identities/patient/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"identities",
+										"patient",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "PhoneService",
+					"item": [
+						{
+							"name": "PatientPhone",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check Status Code\",function(){\r",
+											"    pm.response.to.have.status(200)\r",
+											"})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/phones/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"phones",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PatientPhone",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check Status Code\",function(){\r",
+											"    pm.response.to.have.status(200)})\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{hasAccessToken}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/phones/{id}",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"phones",
+										"{id}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PhoneId",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/phones/patient/1",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"phones",
+										"patient",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostPhones",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"patientId\": 0,\r\n  \"phoneTypeCode\": \"string\",\r\n  \"phoneNumber\": \"string\",\r\n  \"listedAs\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/phones",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"phones"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PutPhones",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"patientPhoneId\": 0,\r\n  \"phoneTypeCode\": \"string\",\r\n  \"phoneNumber\": \"string\",\r\n  \"listedAs\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hasBaseServiceUrl}}/api/patients/phones",
+									"host": [
+										"{{hasBaseServiceUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"phones"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ReportingService",
+			"item": [
+				{
+					"name": "Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Check for Status code\", function(){pm.response.to.have.status(200)})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hasBaseServiceUrl}}/api/reports/patients/new/count",
+							"host": [
+								"{{hasBaseServiceUrl}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"patients",
+								"new",
+								"count"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{hasAccessToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var getToken = true;",
+					"",
+					"if (!pm.variables.get('oauth_expiry_time') || ",
+					"    !pm.variables.get('hasAccessToken')) {",
+					"    console.log('Token or expiry time are missing')",
+					"} else if (pm.variables.get('oauth_expiry_time') <= (new Date()).getMinutes()) {",
+					"    console.log('Token is expired')",
+					"} else {",
+					"    getToken = false;",
+					"    console.log('Token and expiry date are all good');",
+					"}",
+					"",
+					"if (getToken === true) {",
+					"   pm.sendRequest({",
+					"      url:  pm.variables.get(\"hasBaseServiceUrl\") + '/api/users/login', ",
+					"      method: 'POST',",
+					"      header: {",
+					"        'Accept': 'application/json',",
+					"        'Content-Type': 'application/json',",
+					"      },",
+					"      body: {",
+					"          mode: 'raw',",
+					"          raw: ",
+					"          {",
+					"            'username' : pm.variables.get(\"username\"),",
+					"            'password': pm.variables.get(\"password\"),",
+					"            'customerCode': pm.variables.get(\"customerCode\")",
+					"          }",
+					"      }",
+					"      ",
+					"  }, function (err, res) {",
+					"      if (err === null) {",
+					"        pm.collectionVariables.set(\"hasAccessToken\", res.json());",
+					"",
+					"        var expiryDate = new Date();",
+					"        expiryDate.setSeconds(expiryDate.getMinutes() + 14);",
+					"        pm.collectionVariables.set('oauth_expiry_time', expiryDate.getTime());",
+					"      }",
+					"  });",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "hasAccessToken",
+			"value": ""
+		},
+		{
+			"key": "oauth_expiry_time",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
