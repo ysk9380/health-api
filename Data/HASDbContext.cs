@@ -37,5 +37,5 @@ public class HASDbContext : DbContext
     public DbSet<ServiceCategory> ServiceCategories => Set<ServiceCategory>();
     public DbSet<State> States => Set<State>();
     public DbSet<HealthVital> HealthVitals => Set<HealthVital>();
-    public DbSet<PatientHealthVital> PatientHealthVitals { get; set; }
+    public DbSet<PatientHealthVital> PatientHealthVitals => Set<PatientHealthVital>();
 }

@@ -42,7 +42,8 @@ public class PatientHealthVitalRepository : IPatientHealthVitalRepository
             PatientId = request.PatientId,
             HealthVitalId = healthVitalId,
             Content = request.Content,
-            CreatedTimestamp = DateTime.Now
+            CreatedTimestamp = DateTime.Now,
+            IsActive = true
         };
 
         _dbContext.PatientHealthVitals.Add(newPatientHealthVital);

@@ -181,5 +181,6 @@ public class PatientService
         PatientPhoneService.Register(app);
         PatientEmailService.Register(app);
         PatientIdentityService.Register(app);
+        PatientHealthVitalService.Register(app);
     }
 }

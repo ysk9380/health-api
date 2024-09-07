@@ -156,6 +156,7 @@ builder.Services.AddScoped<IAppUserIdentityRepository, AppUserIdentityRepository
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<IPatientAddressRepository, PatientAddressRepository>();
 builder.Services.AddScoped<IPatientPhoneRepository, PatientPhoneRepository>();
+builder.Services.AddScoped<IPatientHealthVitalRepository, PatientHealthVitalRepository>();
 builder.Services.AddScoped<IPatientEmailRepository, PatientEmailRepository>();
 builder.Services.AddScoped<IPatientIdentityRepository, PatientIdentityRepository>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();

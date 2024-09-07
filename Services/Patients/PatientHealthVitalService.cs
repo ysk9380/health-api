@@ -19,7 +19,7 @@ public class PatientHealthVitalService
         return Results.Ok(patientHealthVital);
     }
 
-    internal static async Task<IResult> GetPatientHealthVitalsByPatientIdAsync(long patientId
+    internal static async Task<IResult> GetPatientHealthVitalsByPatientIdAsync(long id
             , IPatientHealthVitalRepository patientHealthVitalRepository)
     {
         IList<PatientHealthVital> patientHealthVitals = await patientHealthVitalRepository.GetPatientHealthVitalsAsync(id);
@@ -76,16 +76,16 @@ public class PatientHealthVitalService
     public static void Register(WebApplication app)
     {
         app.MapGet(string.Join("/", BaseService, "{id}"), GetPatientPatientHealthVitalByIdAsync)
-        .WithName("GetPatientEmailById")
-        .WithDescription("Fetches patient email record using patient email id.")
+        .WithName("GetPatientPatientHealthVitalById")
+        .WithDescription("Fetches patient health vital record using patient health vital id.")
         .Produces<PatientHealthVital>(200)
         .Produces(401)
         .RequireAuthorization();
 
         app.MapGet(string.Join("/", BaseService, "patient/{id}"), GetPatientHealthVitalsByPatientIdAsync)
-        .WithName("GetPatientEmailsByPatientId")
-        .WithDescription("Fetches patient email records using patient id.")
-        .Produces<PatientEmail[]>(200)
+        .WithName("GetPatientHealthVitalsByPatientId")
+        .WithDescription("Fetches patient health vital records using patient id.")
+        .Produces<PatientHealthVital[]>(200)
         .Produces(401)
         .RequireAuthorization();
 

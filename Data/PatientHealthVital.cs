@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Health.Api.Data;
 
+[Table("patienthealthvital")]
 public class PatientHealthVital
 {
     [Key]
