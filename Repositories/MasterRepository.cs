@@ -23,6 +23,7 @@ public interface IMasterRepository
     Task<IList<ServiceCategory>> GetServiceCategoriesAsync();
     Task<byte> GetServiceCategoryIdAsync(string serviceCategoryCode);
     Task<IList<HealthVital>> GetHealthVitalsAsync();
+    Task<int> GetHealthVitalIdAsync(string healthVitalCode);
 }
 
 public class MasterRepository : IMasterRepository
@@ -168,5 +169,13 @@ public class MasterRepository : IMasterRepository
         return await _Context.HealthVitals
                         .OrderBy(o => o.HealthVitalId)
                         .ToListAsync();
+    }
+
+    public async Task<int> GetHealthVitalIdAsync(string healthVitalCode)
+    {
+        int healthVitalId = await _Context.HealthVitals.Where(r => r.HealthVitalCode.Equals(healthVitalCode))
+                                        .Select(s => s.HealthVitalId)
+                                        .FirstOrDefaultAsync();
+        return healthVitalId;
     }
 }

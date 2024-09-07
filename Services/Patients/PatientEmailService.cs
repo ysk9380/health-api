@@ -74,7 +74,7 @@ public class PatientEmailService
 
         var matchingOtherEmailRecord = await patientEmailRepository.GetPatientEmailByEmailAddressAsync(existingRecord.PatientId
             , request.EmailAddress);
-        if (matchingOtherEmailRecord != null && 
+        if (matchingOtherEmailRecord != null &&
             matchingOtherEmailRecord.PatientEmailId != request.PatientEmailId)
             return Results.Conflict<PatientEmail>(matchingOtherEmailRecord);
 
@@ -144,7 +144,7 @@ public class PatientEmailService
         .WithDescription("Deactivate a patient email record.")
         .Produces<dynamic>(400)
         .Produces(401)
-        .Produces<PatientAddress>(204)
+        .Produces<PatientEmail>(204)
         .RequireAuthorization();
     }
 }

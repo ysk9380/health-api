@@ -17,4 +17,9 @@ public class PatientHealthVital
 
     [MaxLength(1000)]
     public string? Content { get; set; }
+
+    [Required]
+    public DateTime CreatedTimestamp { get; set; }
+
+    public bool IsActive { get; set; }
 }
