@@ -11,6 +11,8 @@ public class HASDbContext : DbContext
 
     public DbSet<Account> Accounts => Set<Account>();
     public DbSet<AddressType> AddressTypes => Set<AddressType>();
+    public DbSet<Appointment> Appointments => Set<Appointment>();
+    public DbSet<AppointmentStatus> AppointmentStatuses => Set<AppointmentStatus>();
     public DbSet<AppUser> AppUsers => Set<AppUser>();
     public DbSet<AppUserAddress> AppUserAddresses => Set<AppUserAddress>();
     public DbSet<AppUserEmail> AppUserEmails => Set<AppUserEmail>();
