@@ -20,6 +20,8 @@ using Health.Api.Repositories.Customers;
 using Health.Api.Services.Customers;
 using Health.Api.Repositories.Operational;
 using Health.Api.Services.Operational;
+using Health.Api.Services.Hospitals;
+using Health.Api.Repositories.Hospitals;
 
 string allowedOriginsKey = "MyAllowedOrigins";
 
@@ -148,6 +150,7 @@ builder.Services.AddScoped<ITokenManager, TokenManager>();
 builder.Services.AddScoped<IDataAuditHistoryRepository, DataAuditHistoryRepository>();
 builder.Services.AddScoped<IMasterRepository, MasterRepository>();
 builder.Services.AddScoped<IReportingRepository, ReportingRepository>();
+builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 builder.Services.AddScoped<IAppUserRepository, AppUserRepository>();
 builder.Services.AddScoped<IAppUserAddressRepository, AppUserAddressRepository>();
 builder.Services.AddScoped<IAppUserPhoneRepository, AppUserPhoneRepository>();
@@ -188,6 +191,7 @@ PatientService.Register(app);
 CustomerService.Register(app);
 ReportingService.Register(app);
 OperationalService.Register(app);
+AppointmentService.Register(app);
 
 app.Run();
 
